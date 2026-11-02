@@ -1,36 +1,37 @@
-# AFTERLIGHT — The Three Realms
+# AFTERLIGHT — The Ten Realms (v2)
 
-An original, browser-based arcade game featuring a cosmic moth, three dimensions, touch controls, a virtual joystick, and keyboard controls.
+An original, self-contained browser arcade game. No build step or dependencies required.
 
-## Play locally
-1. Download or clone this repository.
-2. Open `index.html` in a modern browser.
-3. Press **START ADVENTURE**.
+## Features
+- Ten progressively themed realms with guardian encounters.
+- Moth evolution across five forms, earned through XP.
+- Boss health bars and increasingly frequent projectile attacks.
+- Power-ups: shield, speed boost, crystal magnet, and blast.
+- Local browser save system using `localStorage`.
+- Achievements and unlocked-realm atlas.
+- Touch-and-drag movement, virtual joystick, on-screen arrow buttons, and WASD/keyboard arrows.
+- Responsive layout for phones, tablets, and desktop browsers.
 
-No build tools, dependencies, server, or installation are required.
+## Run locally
+Open `index.html` in a modern browser. For best results, use a local static server or GitHub Pages. No install is needed.
+
+## Publish with GitHub Pages
+1. Create a GitHub repository (for example, `afterlight`).
+2. Upload `index.html`, `README.md`, and `LICENSE` to the repository root.
+3. Open **Settings → Pages**.
+4. Under **Build and deployment**, select **Deploy from a branch**.
+5. Choose branch `main`, folder `/ (root)`, then save.
+6. Open the published Pages URL after deployment completes.
+
+## Save data
+Progress is stored locally in the browser under `afterlight-save-v2`. It does not sync between devices or browsers. Clearing site data can erase the save.
 
 ## Controls
-- **Touchscreen:** drag on the game field to move.
-- **Virtual joystick:** hold and drag the joystick.
-- **Arrow buttons:** hold a direction button.
-- **Keyboard:** WASD or arrow keys.
-- **Pause / Restart:** use the buttons below the controls.
-
-## Dimensions
-1. **The Remembering Garden:** collect 10 stars and avoid echoes.
-2. **The Moonless Realm:** collect 15 crystals and dodge energy orbs.
-3. **The End of Everything:** collect 20 void runes and survive the Void Warden's projectile waves.
-
-## GitHub Pages
-To publish:
-1. Create a new GitHub repository.
-2. Upload `index.html` and this `README.md` to the repository root.
-3. Open **Settings → Pages**.
-4. Under the build/deployment settings, choose **Deploy from a branch**, select `main` and `/ (root)`, then save.
-5. Wait for GitHub Pages to publish the site.
-
-## Project structure
-- `index.html` — complete game (HTML, CSS, and JavaScript).
+- Drag directly on the game canvas.
+- Hold and move the virtual joystick.
+- Hold an on-screen arrow.
+- Use WASD or keyboard arrow keys.
+- Pause, save, or restart with the buttons below the controls.
 
 ## License
-This project is provided under the MIT License. See `LICENSE`.
+MIT. See `LICENSE`.
