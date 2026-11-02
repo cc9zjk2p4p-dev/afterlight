@@ -187,6 +187,8 @@ let save={unlocked:1,xp:0,achievements:[],best:0};
 let rafId=null,lastTick=0;
 const mobileDevice=matchMedia('(pointer: coarse)').matches || /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
 const frameInterval=mobileDevice?1000/30:1000/45;
+// Render at a lighter backing resolution on phones; keep the same 600x480 game coordinates.
+if(mobileDevice){canvas.width=450;canvas.height=360;ctx.setTransform(.75,0,0,.75,0,0)}
 function scheduleLoop(){if(running && rafId===null)rafId=requestAnimationFrame(loop);}
 try{const s=JSON.parse(localStorage.getItem('afterlight-save-v2')||'null');if(s)save={...save,...s}}catch(e){}
 xp=save.xp||0;unlocked=Math.max(1,Math.min(10,save.unlocked||1));achievements=save.achievements||[];
