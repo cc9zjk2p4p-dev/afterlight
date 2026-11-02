@@ -1,4 +1,4 @@
-# AFTERLIGHT — The Ten Realms (v2.3.0 Game UI Update)
+# AFTERLIGHT — The Ten Realms (v2.4.0 Mobile Game Rebuild)
 
 An original, self-contained browser arcade game. No build step or dependencies required.
 
@@ -49,3 +49,13 @@ MIT. See `LICENSE`.
 - Added a visible version badge in the game header so the deployed build can be checked at a glance.
 - Added browser-level protections against pinch zoom, multi-touch page zoom, double-tap zoom, and Ctrl/Command zoom shortcuts.
 - Retains the v2.2 mobile performance improvements and touch controls.
+
+
+## Version 2.4.0 — Mobile game rebuild
+- Reworked the main play screen into a fixed-height app layout with no page scrolling during gameplay.
+- Added a separate Archive tab for evolution, power-up descriptions, achievements, and the realm atlas.
+- Added Archive sorting: realm order, unlocked first, and name A–Z.
+- Cached the static starfield/background so it is not redrawn from scratch on every frame.
+- Removed synchronous localStorage writes and full archive rendering from ordinary crystal pickups; progress is saved periodically and on manual save or milestones.
+- Reduced mobile particle effects and canvas shadow costs, and capped active projectiles.
+- Preserved touch joystick, arrow controls, pause, save, restart, and pinch-zoom prevention.
