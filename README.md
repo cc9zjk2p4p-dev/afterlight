@@ -1,4 +1,4 @@
-# AFTERLIGHT — The Ten Realms (v2.2 Mobile Performance Update)
+# AFTERLIGHT — The Ten Realms (v2.3.0 Game UI Update)
 
 An original, self-contained browser arcade game. No build step or dependencies required.
 
@@ -42,3 +42,10 @@ MIT. See `LICENSE`.
 - Particle effects are capped to reduce memory and graphics load.
 - The animation loop is guarded against duplicate requestAnimationFrame chains.
 - Held controls are cleared when the page loses focus or becomes hidden.
+
+
+## Version 2.3.0
+- Added a polished, game-app-inspired visual interface with a stronger game identity, refined HUD cards, controls, panels, and mobile-safe spacing.
+- Added a visible version badge in the game header so the deployed build can be checked at a glance.
+- Added browser-level protections against pinch zoom, multi-touch page zoom, double-tap zoom, and Ctrl/Command zoom shortcuts.
+- Retains the v2.2 mobile performance improvements and touch controls.
