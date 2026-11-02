@@ -1,4 +1,4 @@
-# AFTERLIGHT — The Ten Realms (v2.4.0 Mobile Game Rebuild)
+# AFTERLIGHT — The Ten Realms (v2.5.0 Mobile Stability Update)
 
 An original, self-contained browser arcade game. No build step or dependencies required.
 
@@ -59,3 +59,10 @@ MIT. See `LICENSE`.
 - Removed synchronous localStorage writes and full archive rendering from ordinary crystal pickups; progress is saved periodically and on manual save or milestones.
 - Reduced mobile particle effects and canvas shadow costs, capped active projectiles, and lowered the phone canvas backing resolution while preserving game coordinates.
 - Preserved touch joystick, arrow controls, pause, save, restart, and pinch-zoom prevention.
+
+
+## Version 2.5.0 — iPhone stability and safe-area update
+- Reduced mobile gameplay rendering to 24 FPS and lowered the canvas backing resolution to 360×288 while retaining the same game coordinates.
+- Disabled expensive canvas glow/shadow effects on touch devices and reduced mobile particle and projectile limits.
+- Only records player movement history in the realm that uses the echo mechanic.
+- Added iPhone viewport safe-area handling and extra top spacing above the title to keep it clear of the status area/notch.
