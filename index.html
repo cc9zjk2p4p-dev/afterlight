@@ -18,11 +18,65 @@ button{border:1px solid #626b9b;background:#272f51;color:white;border-radius:11p
 .arrows{display:grid;grid-template-columns:repeat(3,44px);gap:4px;justify-content:center}.arrows button{height:42px;padding:0;font-size:19px}
 .actions{display:flex;gap:8px}.actions button{flex:1}.panels{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}.panel{background:#1b2240;border:1px solid #414d79;border-radius:12px;padding:12px;font-size:13px;color:#c3cce8}.panel h3{margin:0 0 8px;color:white;font-size:14px}.chips{display:flex;flex-wrap:wrap;gap:5px}.chip{font-size:11px;border:1px solid #56638e;background:#242e50;border-radius:20px;padding:4px 8px}.locked{opacity:.45}.progress{height:7px;background:#303956;border-radius:9px;overflow:hidden;margin:6px 0}.progress i{display:block;height:100%;background:linear-gradient(90deg,#70dfff,#b58cff);width:0%}.small{font-size:11px;color:#b9c3e5}.toast{min-height:20px;text-align:center;color:#e3d8ff;font-size:13px;margin:7px}
 @media(max-width:600px){body{padding:9px}.grid{grid-template-columns:repeat(4,1fr);gap:5px}.stat{padding:6px 3px}.stat strong{font-size:15px}.panels{grid-template-columns:1fr}.controls{gap:5px}.stick{width:100px;height:100px}.arrows{grid-template-columns:repeat(3,39px)}.arrows button{height:39px}}
+
+/* v2.3.0 — native-game inspired presentation */
+:root{font-family:ui-rounded,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;background:#070a16;color:#f4f5ff;overscroll-behavior:none}
+html{min-height:100%;background:#070a16;overscroll-behavior:none;touch-action:pan-x pan-y}
+body{min-height:100svh;padding:clamp(10px,2.4vw,24px);padding-top:max(12px,env(safe-area-inset-top));padding-bottom:max(14px,env(safe-area-inset-bottom));background:radial-gradient(ellipse at 50% -12%,#34376c 0%,#151a37 34%,#080b18 75%);overscroll-behavior:none;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none}
+main{max-width:900px}
+.head{margin:2px 0 18px}
+.brandline{display:flex;align-items:center;justify-content:center;gap:9px}
+.brandmark{display:grid;place-items:center;width:29px;height:29px;border-radius:9px;background:linear-gradient(145deg,#a7a2ff,#5c59b7);color:#fff;font-size:18px;box-shadow:0 0 22px #8d8aff66}
+.brandname{font-size:clamp(25px,5vw,38px);font-weight:900;letter-spacing:.19em;text-shadow:0 3px 24px #8f8aff55}
+.version-tag{align-self:center;border:1px solid #7779b7;background:#27294d;color:#dcdcff;border-radius:7px;padding:4px 7px;font-size:10px;font-weight:800;letter-spacing:.06em}
+.head p{font-size:12px;letter-spacing:.035em;color:#aeb8df;margin-top:8px}
+.headline-dot{color:#8f8aff}
+.grid{gap:8px;margin-bottom:12px}
+.stat{background:linear-gradient(155deg,#242c50,#171d38);border:1px solid #485486;border-radius:13px;padding:10px 6px;box-shadow:inset 0 1px #ffffff0d,0 7px 20px #0002}
+.stat small{font-size:9px;font-weight:800;letter-spacing:.13em;color:#aebbe8}
+.stat strong{font-size:clamp(14px,2.5vw,19px);font-weight:850}
+.shell{border:1px solid #7277b5;border-radius:19px;background:#0c1025;box-shadow:0 18px 55px #0008,0 0 0 4px #ffffff08;isolation:isolate}
+canvas{width:100%;aspect-ratio:5/4;touch-action:none;-webkit-user-select:none;user-select:none}
+.overlay{background:linear-gradient(145deg,#0a0e22f5,#141735f2);backdrop-filter:blur(9px)}
+.overlay>div:first-child{filter:drop-shadow(0 0 18px #b4aaff)}
+.overlay h2{font-weight:900;letter-spacing:.08em;text-shadow:0 3px 20px #a39aff55}
+button{border:1px solid #59669b;background:linear-gradient(180deg,#303b67,#20294c);border-radius:12px;box-shadow:inset 0 1px #ffffff18,0 5px 13px #0003;transition:transform .12s ease,filter .12s ease}
+button:active{filter:brightness(1.25);transform:scale(.96)}
+.primary{background:linear-gradient(135deg,#8980f5,#5b57bd)!important;border:1px solid #b6afff!important;box-shadow:0 5px 24px #7770e955,inset 0 1px #ffffff55!important}
+.hint{font-size:11px;color:#9da9d3}
+.controls{background:#111731;border:1px solid #343f68;border-radius:17px;padding:13px 8px;margin:13px 0;box-shadow:inset 0 1px #ffffff08}
+.control-title{font-size:10px;font-weight:850;letter-spacing:.12em;color:#c4cafa}
+.stick{background:radial-gradient(circle at 50% 42%,#46558a,#202b50 72%);border:2px solid #7789c7;box-shadow:inset 0 2px 12px #0005,0 5px 16px #0004}
+.knob{box-shadow:0 2px 17px #8198ff99,inset 0 1px #ffffff88}
+.arrows button{background:linear-gradient(180deg,#3b4775,#252f55);font-weight:900}
+.actions{gap:9px;margin-top:12px}
+.actions button{font-size:12px;padding:11px 8px}
+.panels{gap:10px;margin-top:13px}
+.panel{background:linear-gradient(150deg,#202848,#151c35);border:1px solid #3d4a77;border-radius:15px;padding:14px;box-shadow:inset 0 1px #ffffff09,0 8px 20px #0002}
+.panel h3{font-size:13px;letter-spacing:.02em}
+.chip{background:#252f51;border-color:#4d5c8c;border-radius:8px;padding:5px 8px}
+.progress{background:#30395b;border:1px solid #47527b;height:8px}
+.progress i{background:linear-gradient(90deg,#69e4f4,#a88aff)}
+.toast{font-weight:650;color:#d8d2ff}
+main>p.hint:last-child{padding:10px 0 2px;color:#7885b3}
+@media(max-width:600px){
+ body{padding-left:10px;padding-right:10px}
+ .head{margin-bottom:13px}
+ .grid{gap:5px}
+ .stat{border-radius:11px;padding:8px 3px}
+ .controls{border-radius:15px;padding:11px 5px}
+ .panels{grid-template-columns:1fr 1fr}
+ .panel{padding:11px}
+ .panel h3{font-size:12px}
+ .actions button{font-size:11px}
+}
+@media(max-width:390px){.panels{grid-template-columns:1fr}.brandname{letter-spacing:.14em}}
+
 </style>
 </head>
 <body>
 <main>
-<header class="head"><h1>AFTERLIGHT</h1><p>The Ten Realms · Evolve, survive, become a legend.</p></header>
+<header class="head"><div class="brandline"><span class="brandmark">✦</span><span class="brandname">AFTERLIGHT</span><span class="version-tag" id="version">v2.3.0</span></div><p>The Ten Realms <span class="headline-dot">·</span> Evolve. Survive. Become a legend.</p></header>
 <section class="grid">
  <div class="stat"><small>REALM</small><strong id="realm">01 / 10</strong></div>
  <div class="stat"><small>CRYSTALS</small><strong id="score">0 / 10</strong></div>
@@ -51,6 +105,16 @@ button{border:1px solid #626b9b;background:#272f51;color:white;border-radius:11p
 <script>
 (()=>{
 const $=id=>document.getElementById(id),canvas=$('game'),ctx=canvas.getContext('2d'),W=600,H=480;
+// Prevent browser pinch/double-tap zoom so touch gestures stay in the game.
+document.addEventListener('gesturestart',e=>e.preventDefault(),{passive:false});
+document.addEventListener('gesturechange',e=>e.preventDefault(),{passive:false});
+document.addEventListener('gestureend',e=>e.preventDefault(),{passive:false});
+document.addEventListener('touchmove',e=>{if(e.touches&&e.touches.length>1)e.preventDefault()},{passive:false});
+let lastTouchEnd=0;
+document.addEventListener('touchend',e=>{const now=Date.now();if(now-lastTouchEnd<=300)e.preventDefault();lastTouchEnd=now},{passive:false});
+window.addEventListener('wheel',e=>{if(e.ctrlKey)e.preventDefault()},{passive:false});
+window.addEventListener('keydown',e=>{if((e.ctrlKey||e.metaKey)&&['+','=','-','0'].includes(e.key))e.preventDefault()});
+
 const realmNames=['Remembering Garden','Moonless Realm','End of Everything','Prism Expanse','Clockwork Deep','Emberwild','Mirror Sea','Starforge','Dreaming Abyss','First Dawn'];
 const evoNames=['Mothling','Glimmerwing','Astral Moth','Eclipse Moth','Celestial Monarch'];
 const evoDescs=['A curious little light in the dark.','Your wings carry a little more starlight.','The cosmos bends around your flight.','A living eclipse with powerful wings.','The legendary guardian of the ten realms.'];
