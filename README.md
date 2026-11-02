@@ -1,4 +1,4 @@
-# AFTERLIGHT — The Ten Realms (v2)
+# AFTERLIGHT — The Ten Realms (v2.2 Mobile Performance Update)
 
 An original, self-contained browser arcade game. No build step or dependencies required.
 
@@ -35,3 +35,10 @@ Progress is stored locally in the browser under `afterlight-save-v2`. It does no
 
 ## License
 MIT. See `LICENSE`.
+
+
+## Mobile performance update (v2.2)
+- Gameplay rendering is capped at 30 FPS on touch/mobile devices and 45 FPS elsewhere.
+- Particle effects are capped to reduce memory and graphics load.
+- The animation loop is guarded against duplicate requestAnimationFrame chains.
+- Held controls are cleared when the page loses focus or becomes hidden.
