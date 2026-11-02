@@ -57,5 +57,5 @@ MIT. See `LICENSE`.
 - Added Archive sorting: realm order, unlocked first, and name A–Z.
 - Cached the static starfield/background so it is not redrawn from scratch on every frame.
 - Removed synchronous localStorage writes and full archive rendering from ordinary crystal pickups; progress is saved periodically and on manual save or milestones.
-- Reduced mobile particle effects and canvas shadow costs, and capped active projectiles.
+- Reduced mobile particle effects and canvas shadow costs, capped active projectiles, and lowered the phone canvas backing resolution while preserving game coordinates.
 - Preserved touch joystick, arrow controls, pause, save, restart, and pinch-zoom prevention.
